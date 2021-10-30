@@ -1,6 +1,13 @@
 div.Container {
     padding: 80px 60px;
-    background: radial-gradient(circle, #6D122F 0%, #8d344b 100%);
+    /* Original red */
+    /*background: radial-gradient(circle, #6D122F 0%, #8d344b 100%);*/
+    /* Adapted using max's variables only */
+    background: radial-gradient(circle, var(--color-grey-900) 0%, var(--color-grey-800) 100%);
+    /* According to max */
+    /*background-image: linear-gradient(to bottom, var(--color-grey-900), var(--color-grey-800));*/
+    /* Variant from Max (reversed the direction) */
+    /*background-image: linear-gradient(to top, var(--color-grey-900), var(--color-grey-800));*/
 }
 
 @media (max-width: 1000px) {

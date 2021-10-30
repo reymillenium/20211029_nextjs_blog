@@ -1,5 +1,5 @@
-import MainNavigationMaximilian from "./MainNavigation/MainNavigationMaximilian";
 import styles from './LayoutMaximilian.module.css';
+import MainNavigationMaximilian from "./MainNavigation/MainNavigationMaximilian";
 import FooterClassic from "../FooterClassic/FooterClassic";
 import PageHead from "../PageHead";
 import Notification from "../Notification/Notification";

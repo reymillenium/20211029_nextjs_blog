@@ -15,28 +15,26 @@ const PostGridItem = (props) => {
         timeZone: 'UTC',
     });
     const imagePath = `/images/posts/${postId}/${image}`;
-    console.log('imagePath = ', imagePath);
 
     return (
         <Fragment>
             <li className={styles.post}>
-                <Link href={postsShowPath(postId || 1)}>
+                <Link href={postsShowPath(postId)}>
                     <a>
-                        <div className={styles.image || ''}>
-                            <Image src={imagePath} alt={title} width={300} height={200}/>
+                        <div className={styles.image}>
+                            <Image src={imagePath} alt={title} width={300} height={200} layout='responsive'/>
                         </div>
 
                         <div className={styles.content}>
-                            <h3>{title || 'The title'}</h3>
-                            <time>{humanReadableDate || 'February 10th 2022'}</time>
-                            <p>{summary || 'The summary of the post'}</p>
+                            <h3>{title}</h3>
+                            <time>{humanReadableDate}</time>
+                            <p>{summary}</p>
                         </div>
                     </a>
                 </Link>
             </li>
         </Fragment>
     );
-
 };
 
 export default PostGridItem;
