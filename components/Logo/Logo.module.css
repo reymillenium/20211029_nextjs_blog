@@ -1,0 +1,35 @@
+/* Mobiles: */
+.logo {
+    text-transform: uppercase;
+    font-size: var(--size-5);
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    color: var(--color-grey-50);
+    display: flex;
+    flex-direction: row;
+    /*vertical-align: center;*/
+    /*vert-align: middle;*/
+    /*horiz-align: center;*/
+}
+
+.logo img {
+    width: 50% !important;
+    height: 50% !important;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Greater displays */
+@media (min-width: 768px) {
+    .logo {
+        font-size: var(--size-8);
+    }
+
+    /* Doesn't really makes any difference */
+    .logo img {
+        /*width: 50% !important;*/
+        /*height: 50% !important;*/
+        /*object-fit: contain;*/
+        /*object-position: center;*/
+    }
+}

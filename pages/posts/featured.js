@@ -6,7 +6,7 @@ const FeaturedPostsPage = () => {
 
     return (
         <Fragment>
-            <Hero/>
+            {/*<Hero/>*/}
 
         </Fragment>
     );

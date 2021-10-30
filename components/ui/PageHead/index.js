@@ -14,8 +14,8 @@ const PageHead = (props) => {
             <meta property="og:site_name" content="Proper Noun"/>
             <meta charSet="utf-8"/>
 
-            <link rel="shortcut icon" type={'image/png'} sizes={"16x16"} href="/blog_logo_green_line_white_860_x_886.png"/>
-            <link rel="apple-touch-icon" href="/blog_logo_green_line_white_860_x_886.png"/>
+            <link rel="shortcut icon" type={'image/png'} sizes={"16x16"} href="/images/site/blog_logo_green_line_white_860_x_886.png"/>
+            <link rel="apple-touch-icon" href="/images/site/blog_logo_green_line_white_860_x_886.png"/>
         </Head>
     );
 };

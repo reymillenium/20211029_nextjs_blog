@@ -16,9 +16,13 @@ const generateRoutes = () => {
     // *** </Posts> ***
 
     // Others:
+    const homePath = `/`;
     const contactPath = `/contact`;
 
     return {
+        // Home (root route):
+        homePath: homePath,
+
         // Posts:
         posts: {
             indexPath: postsIndexPath,
@@ -31,7 +35,7 @@ const generateRoutes = () => {
                 // destroyPath: postsApiDestroyPath,
             },
             featuredIndexPath: postsFeaturedIndexPath,
-            filteredPath: postsSlugPath,
+            // filteredPath: postsSlugPath,
         },
 
         users: {},

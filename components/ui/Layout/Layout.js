@@ -1,8 +1,8 @@
-import MainNavigation from './MainNavigation/MainNavigation';
+import MainNavigation from "./MainNavigation/MainNavigation";
 import styles from './Layout.module.css';
-import FooterClassic from "../ui/FooterClassic/FooterClassic";
-import PageHead from "../ui/PageHead";
-import Notification from "../ui/Notification/Notification";
+import FooterClassic from "../FooterClassic/FooterClassic";
+import PageHead from "../PageHead";
+import Notification from "../Notification/Notification";
 // import {NotificationContext} from "../../store/notificationContext";
 import {useContext} from "react";
 
