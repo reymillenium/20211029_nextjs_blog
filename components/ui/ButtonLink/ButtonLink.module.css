@@ -1,0 +1,16 @@
+.actionsDetailsBtnRow {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: min-content;
+    background-image: linear-gradient(#77002e, #8d344b);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.actionsDetailsBtnRow:hover,
+.actionsDetailsBtnRow:active {
+    background-image: linear-gradient(#690128, #7c2e42);
+    border-color: #7c2e44;
+}
