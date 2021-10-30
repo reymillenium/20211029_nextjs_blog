@@ -2,7 +2,7 @@ import {Fragment} from "react";
 import Hero from "../../components/Posts/Hero/Hero";
 import FeaturedPosts from "../../components/Posts/FeaturedPosts/FeaturedPosts";
 
-const FeaturedPostsPage = () => {
+const PostsFeaturedIndexPage = () => {
 
     return (
         <Fragment>
@@ -12,4 +12,4 @@ const FeaturedPostsPage = () => {
     );
 };
 
-export default FeaturedPostsPage;
+export default PostsFeaturedIndexPage;

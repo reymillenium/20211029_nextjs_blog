@@ -1,15 +1,16 @@
 import {Fragment, useEffect} from "react";
-// import {NavLink} from "react-router-dom";
-import {useRouter} from "next/router";
-
 import styles from './../styles/404.module.css';
-
+// import {NavLink} from "react-router-dom";
+import generateRoutes from "../tools/generateRoutes";
+import {useRouter} from "next/router";
 
 const Error404 = () => {
     const router = useRouter();
+    const routes = generateRoutes();
+    const {homePath} = routes;
 
     const goToHome = () => {
-        router.push('/events').then(r => {
+        router.push(homePath).then(r => {
         });
     };
 

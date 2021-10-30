@@ -1,41 +1,45 @@
 const generateHeadInfo = (componentName, pageProps) => {
-    let title = 'Miami Events';
-    let description = 'A new way to manage our events';
+    let title = 'Rei’s Blog';
+    let description = 'A personal Blog to share my thoughts about programming';
 
     switch (componentName) {
-        case 'EventsIndexPage':
-            title = 'Miami Events';
-            description = 'Browse a list of highly active events';
+        case 'HomePage':
+            title += ` | Home Page`;
             break;
 
-        case 'EventsFeaturedIndexPage':
-            title = 'Featured Miami Events';
-            description = 'Browse a list of highly active featured events';
+        case `PostsIndexPage`:
+            title += ` | Posts`;
+            description = `Browse a list of posts`;
             break;
 
-        case 'EventsNewPage':
-            title = 'Add a New Event';
-            description = 'Add your own event and create amazing opportunities';
+        case `PostsFeaturedIndexPage`:
+            title += ` | Featured Posts`;
+            description = `Browse a list of featured posts`;
             break;
 
-        case 'EventsShowPage':
-            title = `${pageProps.event.title}`;
+        case 'PostsNewPage':
+            title += ` | Add a new Post`;
+            description = `Add your own post and share with the community`;
+            break;
+
+        case 'PostsShowPage':
+            title += ` | ${pageProps.posts.title}`;
             description = `${pageProps.event.description}`;
             break;
 
-        case 'FilteredEventsPage':
-            title = `Events - Special search`;
-            description = ``;
+        // case 'FilteredPostsPage':
+        //     title = ` | Posts Special search`;
+        //     description = ``;
+        //     break;
+
+        case 'ContactPage':
+            title += ` | Contact Page`;
+            description = `You can contact me this way`;
             break;
 
         case 'Error404':
-            title = 'Miami Events';
-            description = 'The resource you are looking for, does not exists';
-            break;
-
-        default:
-            title = 'Miami Events';
-            description = 'A new way to manage our events';
+            title += ` | The page doesn't exist`;
+            description = `The resource you are looking for, does not exists`;
             break;
     }
 
