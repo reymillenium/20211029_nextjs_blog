@@ -2,12 +2,31 @@ import {Fragment} from "react";
 import Hero from "../components/ui/Hero/Hero";
 import FeaturedPosts from "../components/Posts/FeaturedPosts/FeaturedPosts";
 
+const dummyPosts = [
+    {
+        id: 'p1',
+        title: 'Post 1',
+        summary: 'Post 1 summary',
+        image: 'getting-started-nextjs.png',
+        date: '2020-04-10',
+    },
+    {
+        id: 'p2',
+        title: 'Post 2',
+        summary: 'Post 2 summary',
+        image: 'nextjs-file-based-routing.png',
+        date: '2021-08-11',
+    },
+];
+
+
 const HomePage = () => {
+    // const {id: postId, title, image, summary, date} = props.post;
 
     return (
         <Fragment>
             <Hero/>
-            <FeaturedPosts/>
+            <FeaturedPosts posts={dummyPosts}/>
         </Fragment>
     );
 };

@@ -10,7 +10,7 @@ const PageHead = (props) => {
             <meta property="og:type" content="website"/>
             <meta name="og:title" property="og:title" content={headInfo.title}/>
             <meta name={"description"} content={`${headInfo.description}`}/>
-            <meta name={'viewport'} content={'initial-scale=1.0, with=device-width'}/>
+            <meta name={'viewport'} content={'initial-scale=1.0, width=device-width'}/>
             <meta property="og:site_name" content="Proper Noun"/>
             <meta charSet="utf-8"/>
 
