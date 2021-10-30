@@ -1,6 +1,6 @@
 import {Fragment} from "react";
 import styles from './MainNavigationMaximilian.module.css';
-import Logo from "../../../Logo/Logo";
+import Logo from "../../Logo/Logo";
 import Link from "next/link";
 import generateRoutes from "../../../../tools/generateRoutes";
 

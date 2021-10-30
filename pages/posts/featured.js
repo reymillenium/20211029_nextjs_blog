@@ -1,5 +1,5 @@
 import {Fragment} from "react";
-import Hero from "../../components/Posts/Hero/Hero";
+import Hero from "../../components/ui/Hero/Hero";
 import FeaturedPosts from "../../components/Posts/FeaturedPosts/FeaturedPosts";
 
 const PostsFeaturedIndexPage = () => {
