@@ -1,67 +1,43 @@
 const generateRoutes = () => {
-    // *** <Events> ***
+    // *** <Posts> ***
     // Basic CRUD Get Routes:
-    const eventsIndexPath = `/events`;
-    const eventsNewPath = `/events/new`;
-    const eventsShowPath = eventId => `/events/show/${eventId}`;
-    const eventsEditPath = eventId => `/events/edit/${eventId}`;
+    const postsIndexPath = `/posts`;
+    const postsNewPath = `/posts/new`;
+    const postsShowPath = postId => `/posts/show/${postId}`;
+    const postsEditPath = postId => `/posts/edit/${postId}`;
     // Basic CRUD API Routes:
-    const eventsApiCreatePath = `/api/events/create`;
-    // const eventsApiUpdatePath = `/api/events/update`;
-    // const eventsApiDestroyPath = `/api/events/destroy`;
+    // const postsApiIndexPath = `/api/posts`;
+    const postsApiCreatePath = `/api/posts/create`;
+    // const postsApiUpdatePath = `/api/posts/update`;
+    // const postsApiDestroyPath = `/api/posts/destroy`;
     // Other Routes:
-    const eventsFeaturedIndexPath = `/events/featured`;
-    const eventsSlugPath = (...slug) => `/events` + slug.map(slugItem => `/${slugItem}`).join('');
-    // *** </Events> ***
+    const postsFeaturedIndexPath = `/posts/featured`;
+    // const postsSlugPath = (...slug) => `/posts` + slug.map(slugItem => `/${slugItem}`).join('');
+    // *** </Posts> ***
 
-    // *** <Subscribers> ***
-    const subscribersApiCreatePath = `api/subscribers/create`;
-    // *** </Subscribers> ***
-
-    // *** <Comments> ***
-    // Basic CRUD Get Routes:
-    // const commentsIndexPath = `/comments`;
-    // const commentsNewPath = `/comments/new`;
-    // const commentsShowPath = commentId => `/comments/show/${commentId}`;
-    // const commentsEditPath = commentId => `/comments/edit/${commentId}`;
-    // Basic CRUD API Routes:
-    const commentsApiCreatePath = `/api/comments/create`;
-    // const commentsApiUpdatePath = `/api/comments/update`;
-    // const commentsApiDestroyPath = `/api/comments/destroy`;
-    // Other API Routes:
-    const commentsPerEventIndexPath = eventId => `/api/comments/${eventId}`;
-    // *** </Comments> ***
+    // Others:
+    const contactPath = `/contact`;
 
     return {
-        // Events:
-        events: {
-            indexPath: eventsIndexPath,
-            newPath: eventsNewPath,
-            showPath: eventsShowPath,
-            editPath: eventsEditPath,
+        // Posts:
+        posts: {
+            indexPath: postsIndexPath,
+            newPath: postsNewPath,
+            showPath: postsShowPath,
+            editPath: postsEditPath,
             api: {
-                createPath: eventsApiCreatePath,
-                // updatePath: eventsApiUpdatePath,
-                // destroyPath: eventsApiDestroyPath,
+                createPath: postsApiCreatePath,
+                // updatePath: postsApiUpdatePath,
+                // destroyPath: postsApiDestroyPath,
             },
-            featuredIndexPath: eventsFeaturedIndexPath,
-            filteredPath: eventsSlugPath,
+            featuredIndexPath: postsFeaturedIndexPath,
+            filteredPath: postsSlugPath,
         },
 
-        // Subscribers:
-        subscribers: {
-            api: {
-                createPath: subscribersApiCreatePath,
-            },
-        },
+        users: {},
 
-        // Comments:
-        comments: {
-            api: {
-                createPath: commentsApiCreatePath,
-                perEventIndexPath: commentsPerEventIndexPath,
-            }
-        },
+        // Others:
+        contactPath: contactPath,
     };
 };
 
