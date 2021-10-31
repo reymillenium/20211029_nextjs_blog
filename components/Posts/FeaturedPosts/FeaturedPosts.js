@@ -12,7 +12,6 @@ const FeaturedPosts = (props) => {
             </section>
         </Fragment>
     );
-
 };
 
 export default FeaturedPosts;

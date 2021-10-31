@@ -10,14 +10,6 @@ div.Container {
     /*background-image: linear-gradient(to top, var(--color-grey-900), var(--color-grey-800));*/
 }
 
-span.emoji {
-    font-size: 10px;
-    vertical-align: middle;
-    line-height: 2;
-    /*display: flex;*/
-    /*flex-direction: row;*/
-}
-
 @media (max-width: 1000px) {
     div.Container {
         padding: 70px 30px;

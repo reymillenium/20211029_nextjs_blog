@@ -2,7 +2,7 @@ import {Fragment} from "react";
 import Hero from "../components/ui/Hero/Hero";
 import FeaturedPosts from "../components/Posts/FeaturedPosts/FeaturedPosts";
 
-const dummyPosts = [
+export const dummyPosts = [
     {
         id: 'p1',
         title: 'Post 1',
@@ -21,8 +21,6 @@ const dummyPosts = [
 
 
 const HomePage = () => {
-    // const {id: postId, title, image, summary, date} = props.post;
-
     return (
         <Fragment>
             <Hero/>
