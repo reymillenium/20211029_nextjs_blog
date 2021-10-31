@@ -15,7 +15,7 @@ const PostContent = (props) => {
                 CONTENT:
                 <br/>
                 <Markdown>
-                    {post.content}
+                    {post && post.content && post.content}
                 </Markdown>
             </article>
         </Fragment>
