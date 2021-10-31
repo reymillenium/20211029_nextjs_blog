@@ -43,14 +43,10 @@ const FooterClassic = () => {
                     </div>
                     <div className={styles.Column}>
                         <p className={styles.Title}>Contact Us</p>
-                        {/*<a className={styles.Link} href="#">United States</a>*/}
-                        {/*<a className={styles.Link} href="#">United Kingdom</a>*/}
-                        {/*<a className={styles.Link} href="#">Australia</a>*/}
-                        {/*<a className={styles.Link} href="#">Support</a>*/}
-                        <a className={styles.Link} href="#"><Image src={'/images/site/flags/us.png'} width={16} height={11}/>&nbsp;&nbsp;&nbsp;United States</a>
-                        <a className={styles.Link} href="#"><Image src={'/images/site/flags/gb.png'} width={16} height={11}/>&nbsp;&nbsp;&nbsp;United Kingdom</a>
-                        <a className={styles.Link} href="#"><Image src={'/images/site/flags/au.png'} width={16} height={11}/>&nbsp;&nbsp;&nbsp;Australia</a>
-                        <a className={styles.Link} href="#"><Image src={'/images/site/flags/us.png'} width={16} height={11}/>&nbsp;&nbsp;&nbsp;Support</a>
+                        <a className={styles.Link} href="#"><Image src={'/images/site/flags/us.png'} alt={'United States of America flag'} width={16} height={11}/>&nbsp;&nbsp;&nbsp;&nbsp;United States</a>
+                        <a className={styles.Link} href="#"><Image src={'/images/site/flags/gb.png'} alt={'United Kingdom flag'} width={16} height={11}/>&nbsp;&nbsp;&nbsp;&nbsp;United Kingdom</a>
+                        <a className={styles.Link} href="#"><Image src={'/images/site/flags/au.png'} alt={'Australia flag'} width={16} height={11}/>&nbsp;&nbsp;&nbsp;&nbsp;Australia</a>
+                        <a className={styles.Link} href="#"><Image src={'/images/site/flags/cu.png'} alt={'Cuba Flag'} width={16} height={11}/>&nbsp;&nbsp;&nbsp;&nbsp;Cuba</a>
                     </div>
 
                     <div className={styles.Column}>
