@@ -9,6 +9,7 @@ export const dummyPosts = [
         summary: 'Post 1 summary',
         image: 'getting-started-nextjs.png',
         date: '2020-04-10',
+        content: '# This is a first post',
     },
     {
         id: 'p2',
@@ -16,6 +17,7 @@ export const dummyPosts = [
         summary: 'Post 2 summary',
         image: 'nextjs-file-based-routing.png',
         date: '2021-08-11',
+        content: '# This is a second post',
     },
 ];
 
