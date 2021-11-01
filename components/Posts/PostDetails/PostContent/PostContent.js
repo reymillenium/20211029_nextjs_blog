@@ -3,7 +3,7 @@ import styles from './PostContent.module.css';
 import PostHeader from "../PostHeader/PostHeader";
 import Markdown from "markdown-to-jsx";
 import ReactMarkdown from "react-markdown";
-// import remarkGfm from 'remark-gfm'
+import remarkGfm from 'remark-gfm'
 
 const PostContent = (props) => {
     const {post} = props;
@@ -12,7 +12,7 @@ const PostContent = (props) => {
 
     return (
         <Fragment>
-            <ReactMarkdown>
+            <ReactMarkdown remarkPlugins={remarkGfm}>
                 {post && post.content && post.content}
             </ReactMarkdown>
         </Fragment>
