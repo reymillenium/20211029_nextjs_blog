@@ -2,6 +2,8 @@ import {Fragment} from "react";
 import styles from './PostContent.module.css';
 import PostHeader from "../PostHeader/PostHeader";
 import Markdown from "markdown-to-jsx";
+import ReactMarkdown from "react-markdown";
+// import remarkGfm from 'remark-gfm'
 
 const PostContent = (props) => {
     const {post} = props;
@@ -10,14 +12,9 @@ const PostContent = (props) => {
 
     return (
         <Fragment>
-            <article className={styles.content}>
-                <PostHeader post={post}/>
-                CONTENT:
-                <br/>
-                <Markdown>
-                    {post && post.content && post.content}
-                </Markdown>
-            </article>
+            <ReactMarkdown>
+                {post && post.content && post.content}
+            </ReactMarkdown>
         </Fragment>
     );
 };

@@ -1,4 +1,5 @@
-// import styles from './PostDetails.module.css';
+import styles from './PostDetails.module.css';
+import PostHeader from "./PostHeader/PostHeader";
 import PostContent from "./PostContent/PostContent";
 import {Fragment} from "react";
 
@@ -7,7 +8,10 @@ const PostDetails = (props) => {
 
     return (
         <Fragment>
-            <PostContent post={post} />
+            <article className={styles.content}>
+                <PostHeader post={post}/>
+                <PostContent post={post}/>
+            </article>
         </Fragment>
     );
 };
