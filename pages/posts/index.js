@@ -31,6 +31,6 @@ export const getStaticProps = async () => {
         props: {
             posts: posts,
         }, // will be passed to the page component as props
-        revalidate: 1,
+        revalidate: 10,
     };
 };
