@@ -10,6 +10,7 @@ export const dummyPosts = [
         image: 'getting-started-nextjs.png',
         date: '2020-04-10',
         content: '# This is a first post',
+        isFeatured: true,
     },
     {
         id: 'p2',
@@ -18,6 +19,7 @@ export const dummyPosts = [
         image: 'nextjs-file-based-routing.png',
         date: '2021-08-11',
         content: '# This is a second post',
+        isFeatured: true,
     },
 ];
 
