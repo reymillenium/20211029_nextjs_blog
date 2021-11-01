@@ -1,7 +1,7 @@
 import {Fragment} from "react";
-import {dummyPosts} from "../../index";
 import PostDetails from "../../../components/Posts/PostDetails/PostDetails";
 import {useRouter} from "next/router";
+import {getAllPosts, getOneSinglePost} from "../../../lib/markdownUtils";
 
 const PostsShowPage = (props) => {
     const router = useRouter();
@@ -23,7 +23,7 @@ const PostsShowPage = (props) => {
 export async function getStaticPaths() {
     let paths = [];
     try {
-        const posts = dummyPosts;
+        const posts = await getAllPosts();
         paths = posts.map(post => ({params: {postId: post.id.toString()},}));
     } catch (error) {
         console.log('error.message = ', error.message);
@@ -50,7 +50,7 @@ export const getStaticProps = async (context) => {
     let post;
 
     try {
-        post = await dummyPosts.find(dummyPost => dummyPost.id === postId);
+        post = await getOneSinglePost(postId);
     } catch (error) {
         // return {notFound: true};
         return {

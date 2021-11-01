@@ -1,15 +1,35 @@
 import {Fragment} from "react";
-// import Hero from "../../components/ui/Hero/Hero";
 import FeaturedPosts from "../../components/Posts/FeaturedPosts/FeaturedPosts";
-import {dummyPosts} from "../index";
+import {getFeaturedPosts} from "../../lib/markdownUtils";
 
-const PostsFeaturedIndexPage = () => {
+const PostsFeaturedIndexPage = (props) => {
+    const {posts} = props;
     return (
         <Fragment>
-            {/*<Hero/>*/}
-            <FeaturedPosts posts={dummyPosts}/>
+            <FeaturedPosts posts={posts}/>
         </Fragment>
     );
 };
 
 export default PostsFeaturedIndexPage;
+
+export const getStaticProps = async () => {
+    let posts;
+    try {
+        posts = await getFeaturedPosts();
+    } catch (error) {
+        // return {notFound: true};
+        return {
+            redirect: {
+                destination: '/404',
+            },
+        };
+    }
+
+    return {
+        props: {
+            posts: posts,
+        }, // will be passed to the page component as props
+        revalidate: 1,
+    };
+};
