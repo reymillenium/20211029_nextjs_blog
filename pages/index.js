@@ -1,7 +1,7 @@
 import {Fragment} from "react";
 import Hero from "../components/ui/Hero/Hero";
 import FeaturedPosts from "../components/Posts/FeaturedPosts/FeaturedPosts";
-import {getAllPosts} from "../lib/markdownUtils";
+import {getFeaturedPosts} from "../lib/markdownUtils";
 
 const HomePage = (props) => {
     const {posts} = props;
@@ -19,7 +19,7 @@ export default HomePage;
 export const getStaticProps = async () => {
     let posts;
     try {
-        posts = await getAllPosts();
+        posts = await getFeaturedPosts();
     } catch (error) {
         // return {notFound: true};
         return {
