@@ -20,4 +20,18 @@ module.exports = {
         }
         return config;
     },
+
+    // Environment variables:
+    env: {
+        mongodb_cluster_name: 'cluster0',
+        mongodb_db_host: 'cluster0.bmfsm.mongodb.net',
+        mongodb_db_name: '20211029_nextjs_blog',
+        mongodb_db_user: 'reinier',
+        mongodb_db_pass: 'Desfasator2015',
+        mongodb_db_uri: 'mongodb+srv://reinier:Desfasator2015@cluster0.bmfsm.mongodb.net/20211029_nextjs_blog?retryWrites=true&w=majority',
+        development_url: 'http://localhost:3000',
+        production_url: 'http://localhost:3000',
+        react_app_sc_disable_speedy: false,
+        mongodb_db_contacts_collection: 'contacts',
+    },
 }
