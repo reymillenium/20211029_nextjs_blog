@@ -22,10 +22,10 @@ const generateHeadInfo = (componentName, pageProps) => {
             description = `Add your own post and share with the community`;
             break;
 
-        // case 'PostsShowPage':
-        //     title += ` | ${pageProps.post.title}`;
-        //     description = `${pageProps.post.description}`;
-        //     break;
+        case 'PostsShowPage':
+            title += ` | ${pageProps.post.title}`;
+            description = `${pageProps.post.summary}`;
+            break;
 
         // case 'FilteredPostsPage':
         //     title = ` | Posts Special search`;
