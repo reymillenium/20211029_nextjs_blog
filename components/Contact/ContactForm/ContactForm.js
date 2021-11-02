@@ -22,8 +22,8 @@ const ContactForm = () => {
                     </div>
 
                     <div className={styles.control}>
-                        <label htmlFor="message">Message:</label>
-                        <textarea name="message" id="message" rows="5"></textarea>
+                        <label htmlFor="text">Message:</label>
+                        <textarea name="text" id="text" rows="5"></textarea>
                     </div>
 
                     <div className={styles.actions}>

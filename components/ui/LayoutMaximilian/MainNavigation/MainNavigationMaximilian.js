@@ -7,12 +7,13 @@ import generateRoutes from "../../../../tools/generateRoutes";
 const MainNavigationMaximilian = () => {
     const routes = generateRoutes();
     const {indexPath: postsIndexPath, featuredIndexPath: postsFeaturedIndexPath} = routes.posts;
-    const {homePath, contactPath} = routes;
+    const {newPath: contactNewPath} = routes.contacts;
+    const {homePath} = routes;
 
     let regularNavLinks = [
         {path: postsIndexPath, name: 'Posts'},
         {path: postsFeaturedIndexPath, name: 'Featured Posts'},
-        {path: contactPath, name: 'Contact'},
+        {path: contactNewPath, name: 'Contact'},
     ].map(linkData => {
         return (
             <li key={linkData.path}>

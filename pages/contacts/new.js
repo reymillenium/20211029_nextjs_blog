@@ -1,5 +1,5 @@
 import {Fragment} from "react";
-import ContactForm from "../components/Contact/ContactForm/ContactForm";
+import ContactForm from "../../components/Contact/ContactForm/ContactForm";
 
 const ContactPage = () => {
     return (

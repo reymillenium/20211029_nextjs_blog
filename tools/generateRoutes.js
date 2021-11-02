@@ -17,7 +17,11 @@ const generateRoutes = () => {
 
     // Others:
     const homePath = `/`;
-    const contactPath = `/contact`;
+
+    // *** </Contacts> ***
+    const contactsNewPath = `/contacts/new`;
+    const contactsApiCreatePath = `/api/contacts/create`;
+    // *** </Contacts> ***
 
     return {
         // Home (root route):
@@ -38,10 +42,13 @@ const generateRoutes = () => {
             // filteredPath: postsSlugPath,
         },
 
-        users: {},
-
-        // Others:
-        contactPath: contactPath,
+        // Contacts:
+        contacts: {
+            newPath: contactsNewPath,
+            api: {
+                createPath: contactsApiCreatePath,
+            },
+        },
     };
 };
 
