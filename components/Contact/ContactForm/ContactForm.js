@@ -63,7 +63,8 @@ const ContactForm = () => {
             return;
         }
 
-        showNotification({title: `Success!`, message: message, status: 'success'});
+        const {name} = responseData.contact;
+        showNotification({title: `Success ${name}!`, message: message, status: 'success'});
     };
 
     async function submitFormHandler(event) {

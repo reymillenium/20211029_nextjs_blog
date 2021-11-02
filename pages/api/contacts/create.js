@@ -19,7 +19,7 @@ export default async function handler(request, response) {
             response.status(500).json({message: 'Inserting the Contact failed'});
             return;
         }
-        response.status(201).json({subscriber: result, message: 'Successfully added the Contact!'});
+        response.status(201).json({contact: result, message: 'Successfully added the Contact!'});
     } else {
         response.status(400).json({message: 'Bad request!'});
     }
