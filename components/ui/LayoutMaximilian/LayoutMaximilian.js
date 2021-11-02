@@ -3,13 +3,13 @@ import MainNavigationMaximilian from "./MainNavigation/MainNavigationMaximilian"
 import FooterClassic from "../FooterClassic/FooterClassic";
 import PageHead from "../PageHead";
 import Notification from "../Notification/Notification";
-// import {NotificationContext} from "../../store/notificationContext";
+import {NotificationContext} from "../../../store/notificationContext";
 import {useContext} from "react";
 
 function LayoutMaximilian(props) {
     const hideNavigation = props.hideNavigation || false;
     const navigation = (hideNavigation ? null : <MainNavigationMaximilian/>);
-    // const {notification, hideNotification} = useContext(NotificationContext);
+    const {notification, hideNotification} = useContext(NotificationContext);
 
     return (
         <>
@@ -17,7 +17,7 @@ function LayoutMaximilian(props) {
             <div>
                 {navigation}
                 <main className={styles.main}>{props.children}</main>
-                {/*{notification && <Notification {...notification} hideNotification={hideNotification}/>}*/}
+                {notification && <Notification {...notification} hideNotification={hideNotification}/>}
                 <FooterClassic/>
             </div>
         </>

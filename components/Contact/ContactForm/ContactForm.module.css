@@ -65,6 +65,21 @@
     border-color: var(--color-primary-500);
 }
 
+
+.ErrorText {
+    color: #b40e0e;
+}
+
+.invalid label {
+    color: #ca3e51;
+}
+
+.invalid input {
+    border-color: #aa0b20;
+    background-color: #ffeff1;
+    /*background-color: #fddddd;*/
+}
+
 @media (min-width: 768px) {
     .contact h1 {
         font-size: var(--size-16);
