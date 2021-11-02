@@ -22,7 +22,8 @@ const PostGridItem = (props) => {
                 <Link href={postsShowPath(postId)}>
                     <a>
                         <div className={styles.image}>
-                            <Image src={imagePath} alt={title} width={300} height={200} layout='responsive'/>
+                            {/* priority={true} Adds a preload and removes a warning: Image with src  was detected as the Largest Contentful Paint (LCP). Please add the "priority" property if this image is above the fold */}
+                            <Image src={imagePath} priority={true} alt={title} width={300} height={200} layout='responsive'/>
                         </div>
 
                         <div className={styles.content}>
