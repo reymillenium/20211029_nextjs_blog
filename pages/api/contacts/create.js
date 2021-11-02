@@ -1,5 +1,5 @@
-// import {addSubscriber} from "../../../lib/mongoDBApi";
-import {addSubscriber} from "../../../lib/firebaseRealtimeDBAPI";
+import {addSubscriber} from "../../../lib/mongoDBApi";
+// import {addSubscriber} from "../../../lib/firebaseRealtimeDBAPI";
 import {emailValidator, nameValidator} from "../../../tools/validators";
 
 export default async function handler(request, response) {
