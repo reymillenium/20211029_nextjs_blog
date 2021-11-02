@@ -65,6 +65,11 @@
     border-color: var(--color-primary-500);
 }
 
+.form button:disabled {
+    background-color: gray;
+    color: white;
+}
+
 
 .ErrorText {
     color: #b40e0e;

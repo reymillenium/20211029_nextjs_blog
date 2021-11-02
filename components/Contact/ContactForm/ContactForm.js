@@ -1,5 +1,5 @@
 import styles from './ContactForm.module.css';
-import {Fragment, useRef, useContext} from "react";
+import {Fragment, useRef, useContext, useEffect} from "react";
 import generateRoutes from "../../../tools/generateRoutes";
 import useInputReducer from "../../../hooks/use-input-reducer";
 import * as validators from '../../../tools/validators';
@@ -111,6 +111,11 @@ const ContactForm = () => {
         }
     }
 
+    useEffect(()=>{
+        // Allows to focus after page reload:
+        emailRef.current.focus();
+    },[])
+
     return (
         <Fragment>
             <section className={styles.contact}>
@@ -124,9 +129,10 @@ const ContactForm = () => {
                                 type="email"
                                 id={'email'}
                                 name={'email'}
+                                required
                                 autoFocus={true}
                                 // placeholder='Your email'
-                                aria-label='Your email'
+                                // aria-label='Your email'
                                 ref={emailRef}
                                 value={emailState}
                                 onChange={emailInputChangeHandler}
