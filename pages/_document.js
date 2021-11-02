@@ -22,7 +22,7 @@ class MyDocument extends Document {
                 <Main/>
                 <NextScript/>
                 {/* Allows to add html content outside of our application component tree (using react portals) */}
-                <div id={'notifications'}/>
+                <div id={'portal_notifications'}/>
                 </body>
             </Html>
         );
