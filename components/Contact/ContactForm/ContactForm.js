@@ -57,7 +57,6 @@ const ContactForm = () => {
         // console.log(responseData);
         const {message} = responseData;
 
-        console.log('response.ok = ', response.ok);
         if (!response.ok) {
             showNotification({title: 'Error!', message: message || 'Something went wrong!', status: 'error'});
             return;

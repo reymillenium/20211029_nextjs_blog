@@ -2,7 +2,7 @@ import {useState, Fragment, useEffect, useCallback} from "react";
 import styles from './ElementalPagination.module.css';
 
 const ElementalPagination = (props) => {
-    console.log(props.items);
+    // console.log(props.items);
     const {items: initialTotalItems} = props;
     const initialState = {
         items: initialTotalItems,
@@ -64,7 +64,7 @@ const ElementalPagination = (props) => {
     useEffect(  () =>  {
         const currentItems =  initialTotalItems.slice(indexOfFirstItem, indexOfLastItem);
         const renderedItems =  getRenderedItems(currentItems);
-        console.log('ElementalPagination->useEffect->renderedItems = ', renderedItems);
+        // console.log('ElementalPagination->useEffect->renderedItems = ', renderedItems);
         setState(prevState => {
             return (
                 {
