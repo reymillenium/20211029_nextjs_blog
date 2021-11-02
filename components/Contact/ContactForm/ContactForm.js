@@ -148,6 +148,7 @@ const ContactForm = () => {
                                 type="text"
                                 id={'name'}
                                 name={'name'}
+                                required
                                 // placeholder='Your email'
                                 aria-label='Your name'
                                 ref={nameRef}
@@ -164,6 +165,7 @@ const ContactForm = () => {
                         <textarea
                             id="message"
                             name="message"
+                            required
                             rows="5"
                             aria-label='Your message'
                             ref={messageRef}
