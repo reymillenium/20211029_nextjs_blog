@@ -1,10 +1,17 @@
 import {Fragment} from "react";
 import styles from './PostContent.module.css';
 import PostHeader from "../PostHeader/PostHeader";
-import Markdown from "markdown-to-jsx";
+// import Markdown from "markdown-to-jsx";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm';
 import Image from "next/image";
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
+// Not working -> Error: Uncaught ReferenceError: Cannot access WEBPACK_DEFAULT_EXPORT  before initialization"
+// import {dark} from 'react-syntax-highlighter/dist/esm/styles/prism';
+
+// Works
+// import {atomOneDarkReasonable} from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import {darcula} from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const PostContent = (props) => {
     const {post} = props;
@@ -42,7 +49,25 @@ const PostContent = (props) => {
                 );
             }
             return <p>{paragraph.children}</p>;
-        }
+        },
+
+        code(code) {
+            const {node, inline, className, children, ...props} = code;
+            const match = /language-(\w+)/.exec(className || '')
+            return !inline && match ? (
+                <SyntaxHighlighter
+                    children={String(children).replace(/\n$/, '')}
+                    style={darcula}
+                    language={match[1]}
+                    PreTag="div"
+                    {...props}
+                />
+            ) : (
+                <code className={className} {...props}>
+                    {children}
+                </code>
+            )
+        },
     }
 
     return (
