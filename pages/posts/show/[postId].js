@@ -26,7 +26,7 @@ export async function getStaticPaths() {
         const fileNames = getFileNamesWithoutExtension();
         paths = fileNames.map(fileName => ({params: {postId: fileName},}));
     } catch (error) {
-        console.log('error.message = ', error.message);
+        console.log('PostsShowPage-> getStaticPaths-> error.message = ', error.message);
     }
 
     return {

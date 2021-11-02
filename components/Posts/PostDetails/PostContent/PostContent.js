@@ -33,7 +33,7 @@ const PostContent = (props) => {
         // },
 
         p(paragraph) {
-            const { node } = paragraph;
+            const {node} = paragraph;
             if (node.children[0].tagName === 'img') {
                 const image = node.children[0];
                 return (
@@ -56,12 +56,14 @@ const PostContent = (props) => {
             const match = /language-(\w+)/.exec(className || '')
             return !inline && match ? (
                 <SyntaxHighlighter
-                    children={String(children).replace(/\n$/, '')}
+                    // children={String(children).replace(/\n$/, '')}
                     style={darcula}
                     language={match[1]}
                     PreTag="div"
                     {...props}
-                />
+                >
+                    {String(children).replace(/\n$/, '')}
+                </SyntaxHighlighter>
             ) : (
                 <code className={className} {...props}>
                     {children}
