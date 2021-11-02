@@ -12,7 +12,7 @@ const PostContent = (props) => {
 
     return (
         <Fragment>
-            <ReactMarkdown remarkPlugins={remarkGfm}>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {post && post.content && post.content}
             </ReactMarkdown>
         </Fragment>
