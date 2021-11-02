@@ -1,5 +1,4 @@
-import {addSubscriber} from "../../../lib/mongoDBApi";
-// import {addSubscriber} from "../../../lib/firebaseRealtimeDBAPI";
+import {addContact} from "../../../lib/mongoDBApi";
 import {emailValidator, nameValidator} from "../../../tools/validators";
 
 export default async function handler(request, response) {
@@ -14,9 +13,7 @@ export default async function handler(request, response) {
     if (requestMethod === 'POST') {
         let result;
         try {
-            // result = await addSubscriber(incomingRequestData);
-            console.log('incomingRequestData = ', incomingRequestData);
-
+            result = await addContact(incomingRequestData);
         } catch (error) {
             console.log('error = ', error);
             response.status(500).json({message: 'Inserting the Contact failed'});
