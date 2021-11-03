@@ -23,7 +23,6 @@ const PostContent = (props) => {
 
     const customRenderers = {
         // img(image) {
-        //   console.log('image', image.src)
         //   return (
         //     < Image
         //       src={`${image.src}`}
