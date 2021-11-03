@@ -54,7 +54,6 @@ const ContactForm = () => {
             }
         });
         const responseData = await response.json();
-        // console.log(responseData);
         const {message} = responseData;
 
         if (!response.ok) {
