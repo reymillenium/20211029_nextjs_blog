@@ -1,17 +1,19 @@
 import {Fragment} from "react";
 import styles from './PostContent.module.css';
-import PostHeader from "../PostHeader/PostHeader";
 // import Markdown from "markdown-to-jsx";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm';
 import Image from "next/image";
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
-// Not working -> Error: Uncaught ReferenceError: Cannot access WEBPACK_DEFAULT_EXPORT  before initialization"
-// import {dark} from 'react-syntax-highlighter/dist/esm/styles/prism';
+// import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
+// import {darcula} from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-// Works
-// import {atomOneDarkReasonable} from "react-syntax-highlighter/dist/cjs/styles/hljs";
-import {darcula} from "react-syntax-highlighter/dist/cjs/styles/prism";
+// In order to get a smaller bundle when building:
+import {PrismLight as SyntaxHighlighter} from 'react-syntax-highlighter';
+import darcula from "react-syntax-highlighter/dist/cjs/styles/prism/darcula";
+import js from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
+import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css';
+SyntaxHighlighter.registerLanguage('js', js);
+SyntaxHighlighter.registerLanguage('css', css);
 
 const PostContent = (props) => {
     const {post} = props;
