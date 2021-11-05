@@ -147,7 +147,7 @@ const ContactForm = () => {
                                 id={'name'}
                                 name={'name'}
                                 required
-                                // placeholder='Your email'
+                                // placeholder='Your name'
                                 aria-label='Your name'
                                 ref={nameRef}
                                 value={nameState}
